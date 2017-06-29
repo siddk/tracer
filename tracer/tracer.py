@@ -426,6 +426,8 @@ class Tracer(object):
                     corrected = True
 
             if not corrected:
+                import ipdb
+                ipdb.set_trace()
                 l.warning("Unable to correct discrepancy between qemu and angr.")
 
         self.path_group = self.path_group.drop(stash='missed')
